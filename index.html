@@ -4,100 +4,165 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AnimePulse</title>
-
+    <meta name="description" content="AnimePulse : actualités, bandes-annonces, tops et sorties anime pour les fans de manga et d'animation." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
 
-<header>
+    <header class="topbar">
+        <div class="logo">Anime<span>Pulse</span></div>
 
-    <div class="logo">
-        Anime<span>Pulse</span>
-    </div>
+        <nav class="nav">
+            <a href="#accueil">Accueil</a>
+            <a href="#trending">Trending</a>
+            <a href="#news">News</a>
+            <a href="#videos">Vidéos</a>
+            <a href="#community">Community</a>
+        </nav>
 
-    <nav>
-        <a href="#">Accueil</a>
-        <a href="#">News</a>
-        <a href="#">Saisons</a>
-        <a href="#">Mangas</a>
-        <a href="#">Contact</a>
-    </nav>
+        <button id="theme-btn" aria-label="Changer de thème">🌙</button>
+    </header>
 
-    <button id="theme-btn">
-        🌙
-    </button>
+    <main>
+        <section class="hero" id="accueil">
+            <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1600&q=80">
+                <source src="https://videos.pexels.com/video-files/855586/855586-hd_1920_1080.mp4" type="video/mp4">
+            </video>
 
-</header>
+            <div class="hero-overlay"></div>
 
-<section class="hero">
+            <div class="hero-content reveal">
+                <p class="eyebrow">Streaming • Saison 2026</p>
+                <h1>Toute l'énergie des animés en un seul endroit.</h1>
+                <p class="subtitle">
+                    Découvre les sorties, les bandes-annonces, les avis de la communauté et les coups de cœur de la semaine.
+                </p>
 
-    <h1>Toute l'actualité des animés</h1>
+                <div class="hero-actions">
+                    <button class="primary-btn">Découvrir</button>
+                    <button class="secondary-btn">Voir la playlist</button>
+                </div>
 
-    <p>
-        Les dernières sorties, bandes-annonces, critiques et annonces.
-    </p>
+                <div class="stats">
+                    <div><strong>120+</strong><span>sorties</span></div>
+                    <div><strong>248</strong><span>vidéos</span></div>
+                    <div><strong>18</strong><span>capsules exclusives</span></div>
+                </div>
+            </div>
+        </section>
 
-</section>
+        <section class="spotlight reveal" id="videos">
+            <div class="section-heading">
+                <span>À la une</span>
+                <h2>Featured drop</h2>
+            </div>
 
-<section class="articles">
+            <div class="spotlight-card">
+                <div class="video-frame">
+                    <div class="play-badge">▶</div>
+                </div>
 
-    <div class="card">
+                <div class="spotlight-copy">
+                    <p class="tag">Exclu</p>
+                    <h3>Le prochain arc de Black Clover prend enfin une tournure explosive</h3>
+                    <p>
+                        Entre changements de casting, suites musicales et révélations de la production, la communauté anime s'agite autour d'un nouvel épisode qui promet un grand retournement.
+                    </p>
+                    <ul>
+                        <li>5 minutes de teaser</li>
+                        <li>Analyse du studio</li>
+                        <li>Réactions des fans</li>
+                    </ul>
+                    <button class="primary-btn small">Regarder</button>
+                </div>
+            </div>
+        </section>
 
-        <img src="démon%20slayer.jpeg">
+        <section class="trending reveal" id="trending">
+            <div class="section-heading">
+                <span>Trending</span>
+                <h2>Les titres qui bougent</h2>
+            </div>
 
-        <h2>Demon Slayer : Nouveau film annoncé</h2>
+            <div id="cards-container" class="cards-grid"></div>
+        </section>
 
-        <p>
-            Le studio Ufotable dévoile une nouvelle bande-annonce.
-        </p>
+        <section class="news-board reveal" id="news">
+            <div class="section-heading">
+                <span>Actualités</span>
+                <h2>Le flux du moment</h2>
+            </div>
 
-        <button class="btn">
-            Lire plus
-        </button>
+            <div class="news-grid">
+                <article class="news-item large">
+                    <div class="news-badge">News</div>
+                    <h3>Crunchyroll dévoile sa programmation automne-hiver avec des surprises</h3>
+                    <p>Plusieurs titres phares seront accompagnés d’éditions spéciales et de remasters visuels inspirés des mangas originaux.</p>
+                </article>
 
-    </div>
+                <article class="news-item">
+                    <div class="news-badge">Analyse</div>
+                    <h3>Pourquoi Solo Leveling a dépassé les attentes de la communauté</h3>
+                    <p>Un mélange de rythme, de tension et d’esthétique qui a immédiatement séduit les nouveaux comme les puristes.</p>
+                </article>
 
-    <div class="card">
+                <article class="news-item">
+                    <div class="news-badge">Studio</div>
+                    <h3>Le prochain projet d’Ufotable fait déjà parler de lui</h3>
+                    <p>Un teaser nocturne et une direction artistique ultra détaillée donnent le ton d’une nouvelle obsession.</p>
+                </article>
+            </div>
+        </section>
 
-        <img src="solo%20leveling.jpeg">
+        <section class="community reveal" id="community">
+            <div class="community-panel">
+                <div>
+                    <p class="eyebrow">Community</p>
+                    <h2>Le buzz de la semaine</h2>
+                </div>
 
-        <h2>Solo Leveling explose les records</h2>
+                <div class="pulse-box">
+                    <span class="pulse-dot"></span>
+                    <p>128k fans actifs</p>
+                </div>
+            </div>
 
-        <p>
-            L'animé devient le plus regardé de la saison.
-        </p>
+            <div class="community-list">
+                <div class="community-item">
+                    <span>🔥</span>
+                    <div>
+                        <strong>Kimetsu no Yaiba</strong>
+                        <small>+18% d’engagement</small>
+                    </div>
+                </div>
+                <div class="community-item">
+                    <span>🎧</span>
+                    <div>
+                        <strong>OST du mois</strong>
+                        <small>La playlist la plus écoutée</small>
+                    </div>
+                </div>
+                <div class="community-item">
+                    <span>📢</span>
+                    <div>
+                        <strong>Annonce</strong>
+                        <small>Nova saison en live ce vendredi</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        <button class="btn">
-            Lire plus
-        </button>
+    <footer>
+        © 2026 AnimePulse • Made for otakus, dreamers and binge-watchers.
+    </footer>
 
-    </div>
-
-    <div class="card">
-
-        <img src="one%20piece.jpeg">
-
-        <h2>One Piece : Nouvel arc confirmé</h2>
-
-        <p>
-            Eiichiro Oda dévoile plusieurs surprises.
-        </p>
-
-        <button class="btn">
-            Lire plus
-        </button>
-
-    </div>
-
-</section>
-
-<footer>
-
-    © 2026 AnimePulse BY HASSANE 
-
-</footer>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
+
